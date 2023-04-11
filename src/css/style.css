@@ -1,0 +1,154 @@
+/* #region base */
+body {
+    font-family: "Manrope", sans-serif;
+    color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* #endregion */
+
+/* #region common */
+.container {
+    max-width: 1345px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.button {
+    cursor: pointer;
+    width: 161px;
+    height: 42px;
+    padding: 10px 20px;
+    border-style: unset;
+    border-radius: 10px 0px 0px 0px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+}
+
+.gradient-text {
+    background: linear-gradient(136.07deg, #284c5b 0%, #051317 107.04%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 400;
+    font-size: 144px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+/* #endregion */
+
+/* #region nav */
+.nav {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__burger {
+    cursor: pointer;
+    height: 10px;
+    width: 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__burger div {
+    border: 1px solid #ffffff;
+    width: 100%;
+}
+
+.nav__contact {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav__contact a {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    line-height: 21px;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region head */
+.header {
+    min-height: 100vh;
+    background-image: url(../images/head_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header__title {
+    margin-bottom: 10px;
+    max-width: 784px;
+}
+
+.booking {
+    position: relative;
+    align-self: center;
+    margin: 66px 0 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.booking__item p {
+    margin-bottom: 6px;
+    width: 167px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.booking__item span {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+}
+/* #endregion */
+
+/* #region name */
+/* #endregion */
+
+/* #region name */
+/* #endregion */
+
+/* #region name */
+/* #endregion */
