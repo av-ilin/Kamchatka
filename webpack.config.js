@@ -4,6 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     target: "web",
+    mode: "production",
+    devServer: {
+        port: 3000,
+        open: true,
+        hot: true,
+    },
     entry: ["@babel/polyfill", path.resolve(__dirname, "src", "index.html")],
     output: {
         path: path.resolve(__dirname, "dist"),

@@ -5,7 +5,8 @@
     "main": "src/js/main.js",
     "scripts": {
         "build": "webpack",
-        "clear": "rd /s /q dist"
+        "clear": "rd /s /q dist",
+        "start": "webpack serve"
     },
     "keywords": [],
     "author": "av-ilin",
@@ -26,7 +27,8 @@
         "sass": "^1.57.1",
         "sass-loader": "^13.2.0",
         "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.1"
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.2"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1"
