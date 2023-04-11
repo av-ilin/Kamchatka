@@ -119,7 +119,6 @@ a {
 }
 
 .booking {
-    position: relative;
     align-self: center;
     margin: 66px 0 60px;
 
@@ -127,6 +126,11 @@ a {
     align-items: center;
     gap: 40px;
 }
+
+.booking__item {
+    position: relative;
+}
+
 .booking__item p {
     margin-bottom: 6px;
     width: 167px;
@@ -141,6 +145,13 @@ a {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: -0.03em;
+}
+.booking__item div {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 10px);
+    font-size: 20px;
 }
 /* #endregion */
 
