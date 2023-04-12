@@ -12,6 +12,7 @@ a {
 /* #endregion */
 
 /* #region common */
+
 .container {
     max-width: 1345px;
     padding: 0 10px;
@@ -53,6 +54,7 @@ a {
     line-height: 30px;
     text-transform: uppercase;
 }
+
 /* #endregion */
 
 /* #region nav */
@@ -179,6 +181,7 @@ a {
 
 .intro .container > img {
     opacity: 0;
+    z-index: 1;
 }
 
 .intro__main-text {
@@ -235,16 +238,20 @@ a {
 
 /* #region about */
 .about {
-    padding-top: 297px;
+    position: relative;
+    padding-top: 381px;
     background: #f2f2f2;
 }
 .about .container {
     position: relative;
-    height: 100vh;
+    z-index: 3;
+    text-align: center;
+    min-height: 1032px;
 }
 
 .about__logo {
     position: absolute;
+    top: -84px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,6 +271,44 @@ a {
     }
 }
 
+.about__title {
+    padding-top: 123px;
+    color: black;
+}
+.about__text {
+    color: black;
+    max-width: 887px;
+    margin: 20px auto 0;
+    font-weight: 300;
+}
+
+.about__button {
+    margin-top: 20px;
+    width: 198px;
+    height: 42px;
+    border: black 1px solid;
+}
+
+.about__house {
+    z-index: 2;
+    max-height: 1032px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+}
+
+.about__chalet {
+    z-index: 1;
+    position: absolute;
+    bottom: 288px;
+    right: 0px;
+    box-sizing: border-box;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 50px 0px 0px 0px;
+    padding: 46px 48px 134px 37px;
+    text-align: start;
+}
 /* #endregion */
 
 /* #region name */
