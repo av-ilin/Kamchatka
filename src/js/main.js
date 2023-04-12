@@ -1,7 +1,7 @@
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
-    duration: window.innerHeight,
+    duration: window.innerHeight + 500,
     triggerElement: "#intro",
     triggerHook: "onEnter",
 })
@@ -50,7 +50,7 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 new ScrollMagic.Scene({
-    duration: window.innerHeight / 2,
+    duration: window.innerHeight + 100,
     triggerElement: "#about",
 })
     .setTween(
