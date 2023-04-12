@@ -2,7 +2,7 @@
 body {
     font-family: "Manrope", sans-serif;
     color: white;
-    background-color: black;
+    background: linear-gradient(136.07deg, #284c5b 0%, #051317 107.04%);
 }
 
 a {
@@ -155,10 +155,83 @@ a {
 }
 /* #endregion */
 
-/* #region name */
+/* #region intro */
+.intro {
+    min-height: 1101px;
+    height: 1px;
+    background-image: url(../images/intro_compass.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 122px;
+}
+
+.intro .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.intro__main-text {
+    max-width: 1010px;
+    margin-top: 100px;
+
+    font-family: "Cormorant Garamond";
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 90px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+.intro__main-text span {
+    color: #e9d3b6;
+}
+
+.intro__text {
+    align-self: flex-end;
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 567px;
+    color: #e9d3b6;
+}
+.intro__text:last-of-type {
+    color: white;
+    margin-top: 10px;
+}
+
+.intro__lscape {
+    position: absolute;
+    border-radius: 40px 0px 0px 0px;
+}
+
+.intro__lscape:first-of-type {
+    bottom: -196px;
+    left: 10px;
+    width: 680px;
+    height: 680px;
+}
+
+.intro__lscape:last-of-type {
+    width: 567px;
+    height: 567px;
+    bottom: -390px;
+    right: 10px;
+}
 /* #endregion */
 
-/* #region name */
+/* #region about */
+.about {
+    height: 500px;
+    background: #f2f2f2;
+}
+.about .container {
+    padding-top: 297px;
+}
 /* #endregion */
 
 /* #region name */
