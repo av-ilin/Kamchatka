@@ -57,6 +57,7 @@ a {
 
 /* #region nav */
 .nav {
+    z-index: 100;
     position: fixed;
     top: 30px;
     width: 100%;
@@ -234,12 +235,37 @@ a {
 
 /* #region about */
 .about {
-    height: 100vh;
+    padding-top: 297px;
     background: #f2f2f2;
 }
 .about .container {
-    padding-top: 297px;
+    position: relative;
+    height: 100vh;
 }
+
+.about__logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about__logo-fix {
+    position: absolute;
+}
+
+.about__logo-dyn {
+    animation: rotation 15s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* #endregion */
 
 /* #region name */
