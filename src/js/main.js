@@ -1,20 +1,33 @@
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
-    duration: 300, // the scene should last for a scroll distance of 100px
-    // offset: intro.getBoundingClientRect().y, // start this scene after scrolling for 50px
+    duration: window.innerHeight,
     triggerElement: "#intro",
-    triggerHook: "onLeave",
+    triggerHook: "onEnter",
 })
-    .setPin("#intro")
-    .setTween(["#intro_main-text", "#intro-text01", "#intro-text02"], {
-        opacity: 1,
-    })
+    .setTween(
+        new TimelineMax()
+            .add(
+                TweenMax.to("#intro_main-text", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#intro-text01", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#intro-text02", {
+                    opacity: 1,
+                })
+            )
+    )
     .addTo(controller);
 
 const introLscape = document.getElementsByClassName("intro__lscape");
 new ScrollMagic.Scene({
-    duration: 700,
+    duration: window.innerHeight / 2,
     triggerElement: "#intro-text01",
 })
     .setTween(
@@ -31,6 +44,41 @@ new ScrollMagic.Scene({
                     opacity: 1,
                     bottom:
                         parseInt(getComputedStyle(introLscape[1]).bottom) + 100,
+                })
+            )
+    )
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    duration: window.innerHeight / 2,
+    triggerElement: "#about",
+})
+    .setTween(
+        new TimelineMax()
+            .add(
+                TweenMax.to("#about-title", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#about-text", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#about-but", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#about-chalet", {
+                    opacity: 1,
+                })
+            )
+            .add(
+                TweenMax.to("#about-house", {
+                    opacity: 1,
+                    bottom: 0,
                 })
             )
     )

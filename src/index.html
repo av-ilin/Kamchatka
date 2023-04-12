@@ -104,14 +104,25 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__logo">
                     <img src="images/about_logo-dyn.svg" alt="logo" />
                     <img src="images/about_logo-fix.svg" alt="logo" />
                 </div>
-                <h1 class="about__title title gradient-text">ОБ отеле</h1>
-                <p class="about__text text gradient-text">
+                <h1
+                    class="about__title title gradient-text"
+                    id="about-title"
+                    style="opacity: 0"
+                >
+                    ОБ отеле
+                </h1>
+
+                <p
+                    class="about__text text gradient-text"
+                    id="about-text"
+                    style="opacity: 0"
+                >
                     Гостей отеля ждут тридцать два роскошных номера, включая два
                     номера класса «люкс», способных удовлетворить самые
                     взыскательные вкусы и высокие ожидания. Часть номеров
@@ -119,11 +130,15 @@
                     первооткрывателей и исследователей Камчатки — «Беринг»,
                     «Дежнев», «Атласов», «Крашенинников»
                 </p>
-                <button class="about__button button">
+                <button
+                    class="about__button button"
+                    id="about-but"
+                    style="opacity: 0"
+                >
                     <span class="gradient-text">Подробнее об отеле</span>
                 </button>
             </div>
-            <div class="about__chalet">
+            <div class="about__chalet" id="about-chalet" style="opacity: 0">
                 <p class="text gradient-text">
                     Гости, чье предпочтение — максимальная приватность, могут
                     остановить свой выбор на отдельно стоящих шале, площадью от
@@ -134,8 +149,10 @@
 
             <img
                 class="about__house"
+                id="about-house"
                 src="images/about_house.png"
                 alt="house"
+                style="opacity: 0"
             />
         </section>
 

@@ -294,7 +294,7 @@ a {
     max-height: 1032px;
     width: 100vw;
     position: absolute;
-    bottom: 0px;
+    bottom: -100px;
 }
 
 .about__chalet {
