@@ -249,14 +249,12 @@ a {
     justify-content: center;
     align-items: center;
 }
-.about__logo-fix {
-    position: absolute;
-}
-
-.about__logo-dyn {
+.about__logo > :first-child {
     animation: rotation 15s linear infinite;
 }
-
+.about__logo > :last-child {
+    position: absolute;
+}
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
