@@ -172,6 +172,14 @@ a {
     height: 100%;
 }
 
+.intro .container > p {
+    opacity: 0;
+}
+
+.intro .container > img {
+    opacity: 0;
+}
+
 .intro__main-text {
     max-width: 1010px;
     margin-top: 100px;
@@ -210,7 +218,7 @@ a {
 }
 
 .intro__lscape:first-of-type {
-    bottom: -196px;
+    bottom: calc(-196px - 100px);
     left: 10px;
     width: 680px;
     height: 680px;
@@ -219,14 +227,14 @@ a {
 .intro__lscape:last-of-type {
     width: 567px;
     height: 567px;
-    bottom: -390px;
+    bottom: calc(-390px - 100px);
     right: 10px;
 }
 /* #endregion */
 
 /* #region about */
 .about {
-    height: 500px;
+    height: 100vh;
     background: #f2f2f2;
 }
 .about .container {
