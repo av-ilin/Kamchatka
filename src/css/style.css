@@ -27,6 +27,7 @@ a {
     border-style: unset;
     border-radius: 10px 0px 0px 0px;
 
+    font-family: "Manrope", sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
@@ -309,6 +310,164 @@ a {
     padding: 46px 48px 134px 37px;
     text-align: start;
 }
+/* #endregion */
+
+/* #region habit */
+.habit {
+    min-height: 100vh;
+    margin: 160px 0 80px;
+}
+
+.habbit__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 25px;
+}
+
+.habit__title {
+    line-height: 94px;
+}
+
+.habbit-menu {
+    display: flex;
+    padding: 4px;
+    height: 42px;
+    gap: 10px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 0px 0px 0px;
+}
+
+.habbit-menu__item {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.habbit-menu__item.active {
+    background: #e9d3b6 !important;
+}
+
+.habbit-menu__item:nth-of-type(1) {
+    width: 68px;
+    border-radius: 10px 0px 0px 0px;
+}
+.habbit-menu__item:nth-of-type(2) {
+    width: 99px;
+}
+.habbit-menu__item:nth-of-type(3) {
+    width: 82px;
+}
+
+.habbit-menu__item:hover {
+    background: rgba(233, 211, 182, 0.7);
+}
+
+.habbit-card {
+    padding-top: 61px;
+    display: flex;
+}
+.habbit-card img {
+    max-width: 892px;
+    max-height: 740px;
+    border-radius: 40px 0px 0px 0px;
+}
+.habbit-card__info-main {
+    box-sizing: border-box;
+    padding: 57px 27px 40px 40px;
+    background-color: #f2f2f2;
+}
+.habbit-card__lvl {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+.habbit-card__desc {
+    padding: 10px 0 30px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.habbit-card__attr {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 60px;
+}
+.habbit-card__attr-item h6 {
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #767c84;
+}
+.habbit-card__attr-item p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+.habbit-card__attr-item:last-of-type p {
+    line-height: 26px;
+    max-width: 220px;
+}
+.habbit-card__buttons {
+    margin-top: 129px;
+}
+.habbit-card__buttons {
+    margin-top: 129px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.habbit-card__buttons button {
+    background: linear-gradient(136.07deg, #284c5b 0%, #051317 107.04%);
+    color: white;
+}
+.habbit-card__buttons a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+}
+
+.habbit-card__info-foot {
+    box-sizing: border-box;
+    padding: 32px 40px;
+    background: #2b3f47;
+
+    display: flex;
+    justify-content: space-between;
+}
+.habbit-card__info-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.habbit-card__info-progress p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #f2f2f2;
+}
+.habbit-card__info-progress div {
+    width: 44px;
+    height: 2px;
+    background: #f2f2f2;
+}
+.habbit-card__info-foot-but {
+    display: flex;
+    gap: 10px;
+}
+/* #endregion */
+
+/* #region name */
+/* #endregion */
+
+/* #region name */
 /* #endregion */
 
 /* #region name */
