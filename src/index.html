@@ -11,10 +11,16 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <nav class="nav">
+        <nav class="nav" id="nav">
+            <div class="nav__bg" style="display: none"></div>
             <div class="container">
-                <img class="nav__logo" src="images/logo.svg" alt="logo" />
-                <div class="nav__burger">
+                <img
+                    class="nav__logo"
+                    id="nav-logo"
+                    src="images/logo.svg"
+                    alt="logo"
+                />
+                <div class="nav__burger" id="nav-burger">
                     <div></div>
                     <div></div>
                 </div>
@@ -23,6 +29,16 @@
                     <button class="button">
                         <span class="gradient-text">Забронировать</span>
                     </button>
+                </div>
+            </div>
+            <div class="nav__menu" style="display: none">
+                <div class="nav__menu-list">
+                    <p class="nav__menu-item">Об отеле</p>
+                    <p class="nav__menu-item">проживание</p>
+                    <p class="nav__menu-item">Ресторан</p>
+                    <p class="nav__menu-item">Услуги</p>
+                    <p class="nav__menu-item">Туры</p>
+                    <p class="nav__menu-item">Контакты</p>
                 </div>
             </div>
         </nav>
@@ -230,9 +246,10 @@
             </div>
         </section>
 
-        <script src="js/ScrollMagic.min.js"></script>
-        <script src="js/gsap.min.js"></script>
-        <script src="js/animation.gsap.min.js"></script>
+        <script src="js/asset/ScrollMagic.min.js"></script>
+        <script src="js/asset/gsap.min.js"></script>
+        <script src="js/asset/animation.gsap.min.js"></script>
+        <script src="js/nav.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
