@@ -12,7 +12,6 @@ a {
 /* #endregion */
 
 /* #region common */
-
 .container {
     max-width: 1345px;
     padding: 0 10px;
@@ -32,6 +31,9 @@ a {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.02em;
+}
+.button:hover {
+    animation: tilt-pulsar 1s linear infinite;
 }
 
 .gradient-text {
@@ -56,6 +58,56 @@ a {
     text-transform: uppercase;
 }
 
+/* #endregion */
+
+/* #region keyframes */
+@keyframes tilt-shaking {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes tilt-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes tilt-pulsar {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 /* #endregion */
 
 /* #region nav */
@@ -91,22 +143,7 @@ a {
 }
 
 .nav__logo:hover {
-    animation: logo-shaking 0.6s linear infinite;
-}
-
-@keyframes logo-shaking {
-    0% {
-        transform: translateX(0px);
-    }
-    25% {
-        transform: translateX(5px);
-    }
-    75% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
+    animation: tilt-shaking 0.6s linear infinite;
 }
 
 .nav__burger {
@@ -153,11 +190,33 @@ a {
     align-items: center;
 }
 .nav__contact a {
+    position: relative;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: -0.03em;
     line-height: 21px;
     text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+.nav__contact a:hover {
+    color: #051317;
+    transform: scale(1.1);
+}
+.nav__contact a:after {
+    background: #e9d3b6;
+    content: "";
+    height: 100%;
+    left: 52%;
+    position: absolute;
+    top: -4%;
+    -webkit-transform: skew(-12deg) translateX(-50%);
+    transform: skew(-12deg) translateX(-50%);
+    transition: all 0.4s ease-in-out;
+    width: 0;
+    z-index: -1;
+}
+.nav__contact a:hover:after {
+    width: 110%;
 }
 
 .nav__bg {
@@ -486,7 +545,7 @@ a {
     padding-top: 61px;
     display: flex;
 }
-.habbit-card img {
+.habbit-card > img {
     cursor: url(../images/habbit_cursor.svg) 25 25, pointer;
     max-width: 892px;
     max-height: 740px;
@@ -590,9 +649,6 @@ a {
 .bering .container {
     text-align: center;
 }
-/* #endregion */
-
-/* #region name */
 /* #endregion */
 
 /* #region name */
