@@ -314,8 +314,7 @@ a {
 
 /* #region habit */
 .habit {
-    min-height: 100vh;
-    margin: 160px 0 80px;
+    margin: 160px 0;
 }
 
 .habbit__head {
@@ -370,6 +369,7 @@ a {
     display: flex;
 }
 .habbit-card img {
+    cursor: url(../images/habbit_cursor.svg) 25 25, pointer;
     max-width: 892px;
     max-height: 740px;
     border-radius: 40px 0px 0px 0px;
@@ -464,7 +464,14 @@ a {
 }
 /* #endregion */
 
-/* #region name */
+/* #region bering */
+.bering {
+    margin: 160px 0;
+}
+
+.bering .container {
+    text-align: center;
+}
 /* #endregion */
 
 /* #region name */
