@@ -1,27 +1,70 @@
-const nav = document.getElementById("nav");
-const navBg = document.getElementsByClassName("nav__bg")[0];
-const navMenu = document.getElementsByClassName("nav__menu")[0];
-const navLogo = document.getElementById("nav-logo");
-const navBurger = document.getElementById("nav-burger");
+class Navigation {
+    static nav = document.getElementById("nav");
+    static bg = document.getElementsByClassName("nav__bg")[0];
+    static menu = document.getElementsByClassName("nav__menu")[0];
+    static logo = document.getElementById("nav-logo");
+    static burger = document.getElementById("nav-burger");
+    static refs = {
+        items: Array.from(document.getElementsByClassName("nav__menu-item")),
+        about: document.getElementsByClassName("about__logo")[0],
+    };
 
-navLogo.onclick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
+    constructor() {
+        Navigation.logo.onclick = () => {
+            this.navOff();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
 
-navBurger.onclick = () => {
-    if (nav.classList.contains("active")) {
+        Navigation.burger.onclick = () => {
+            if (Navigation.nav.classList.contains("active")) this.navOff();
+            else this.navOn();
+        };
+
+        window.addEventListener("scroll", () => {
+            if (
+                window.scrollY > 20 &&
+                !Navigation.nav.classList.contains("down")
+            )
+                Navigation.nav.classList.add("down");
+            if (
+                window.scrollY < 20 &&
+                Navigation.nav.classList.contains("down")
+            )
+                Navigation.nav.classList.remove("down");
+        });
+
+        Navigation.refs.items.forEach((navItem, index) => {
+            navItem.onclick = () => {
+                this.navTo(index);
+            };
+        });
+    }
+
+    navOff() {
         document.body.style.overflow = "";
-        nav.classList.remove("active");
+        Navigation.nav.classList.remove("active");
         setTimeout(() => {
-            navBg.style.display = "none";
-            navMenu.style.display = "none";
+            Navigation.bg.style.display = "none";
+            Navigation.menu.style.display = "none";
         }, 730);
-    } else {
+    }
+
+    navOn() {
         document.body.style.overflow = "hidden";
-        navBg.style.display = "";
-        navMenu.style.display = "";
+        Navigation.bg.style.display = "";
+        Navigation.menu.style.display = "";
         setTimeout(() => {
-            nav.classList.add("active");
+            Navigation.nav.classList.add("active");
         }, 30);
     }
-};
+
+    navTo(index) {
+        this.navOff();
+
+        switch (index % 6) {
+            case 0:
+                Navigation.refs.about.scrollIntoView({ behavior: "smooth" });
+                break;
+        }
+    }
+}

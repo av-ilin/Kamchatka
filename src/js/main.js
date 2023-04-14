@@ -1,10 +1,12 @@
+const navigation = new Navigation();
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
-    duration: window.innerHeight + 500,
+    duration: 600,
     triggerElement: "#intro",
-    triggerHook: "onEnter",
+    // triggerHook: "onLeave",
 })
+    // .setPin("#intro")
     .setTween(
         new TimelineMax()
             .add(
@@ -27,8 +29,9 @@ new ScrollMagic.Scene({
 
 const introLscape = document.getElementsByClassName("intro__lscape");
 new ScrollMagic.Scene({
-    duration: window.innerHeight / 2,
-    triggerElement: "#intro-text01",
+    duration: 600,
+    triggerElement: "#intro_main-text",
+    triggerHook: "onLeave",
 })
     .setTween(
         new TimelineMax()
@@ -50,8 +53,8 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 new ScrollMagic.Scene({
-    duration: window.innerHeight + 100,
-    triggerElement: "#about",
+    duration: 600,
+    triggerElement: "#about-trigger",
 })
     .setTween(
         new TimelineMax()
