@@ -1,4 +1,6 @@
 const navigation = new Navigation();
+
+//#region scrollnagic
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
@@ -27,7 +29,6 @@ new ScrollMagic.Scene({
     )
     .addTo(controller);
 
-const introLscape = document.getElementsByClassName("intro__lscape");
 new ScrollMagic.Scene({
     duration: 600,
     triggerElement: "#intro_main-text",
@@ -36,17 +37,25 @@ new ScrollMagic.Scene({
     .setTween(
         new TimelineMax()
             .add(
-                TweenMax.to("#intro-img01", {
+                TweenMax.to("#intro-img-swiper-box", {
                     opacity: 1,
                     bottom:
-                        parseInt(getComputedStyle(introLscape[0]).bottom) + 100,
+                        parseInt(
+                            getComputedStyle(
+                                document.getElementById("intro-img-swiper-box")
+                            ).bottom
+                        ) + 100,
                 })
             )
             .add(
-                TweenMax.to("#intro-img02", {
+                TweenMax.to("#intro-img", {
                     opacity: 1,
                     bottom:
-                        parseInt(getComputedStyle(introLscape[1]).bottom) + 100,
+                        parseInt(
+                            getComputedStyle(
+                                document.getElementById("intro-img")
+                            ).bottom
+                        ) + 100,
                 })
             )
     )
@@ -86,8 +95,9 @@ new ScrollMagic.Scene({
             )
     )
     .addTo(controller);
+//#endregion
 
-// Header
+//#region Header
 const headerTiming = 10 * 1e3;
 const headerSwiperProgressElems = {
     numCurSlide: document.getElementById("header-cur-slide"),
@@ -152,3 +162,33 @@ const headerSwiper = new Swiper("#header-bg-swiper", {
         },
     },
 });
+//#endregion
+
+//#region intro
+const introSwiperProgressElems = {
+    numCurSlide: document.getElementById("intro-cur-slide"),
+    numCountSlides: document.getElementById("intro-count-slides"),
+};
+const introSwiper = new Swiper("#intro-img-swiper", {
+    loop: true,
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+        waitForTransition: true,
+    },
+    speed: 1000,
+    on: {
+        init: function () {
+            introSwiperProgressElems.numCountSlides.textContent = String(
+                this.slides.length
+            ).padStart(2, "0");
+        },
+        slideNextTransitionStart: function () {
+            introSwiperProgressElems.numCurSlide.textContent = String(
+                this.realIndex + 1
+            ).padStart(2, "0");
+        },
+    },
+});
+
+//#endregion
