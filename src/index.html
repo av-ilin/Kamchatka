@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/fonts.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
     </head>
     <body>
         <nav class="nav" id="nav">
@@ -44,11 +48,74 @@
         </nav>
 
         <section class="header">
+            <div class="swiper" id="header-bg-swiper">
+                <div class="swiper-wrapper">
+                    <img
+                        class="header_bg-slide swiper-slide"
+                        src="images/head_bg.png"
+                        alt="chalet photo"
+                    />
+                    <img
+                        class="header_bg-slide swiper-slide"
+                        src="images/head_bg.png"
+                        alt="chalet photo"
+                    />
+                    <img
+                        class="header_bg-slide swiper-slide"
+                        src="images/head_bg.png"
+                        alt="chalet photo"
+                    />
+                </div>
+            </div>
             <div class="container">
-                <h1 class="header__title title">Камчатка Шале</h1>
-                <h4 class="header__subtitle text">
-                    первый в истории Камчатки пятизвездочный отель
-                </h4>
+                <div class="header__content">
+                    <div class="header__content-text">
+                        <h1 class="header__title title">Камчатка Шале</h1>
+                        <h4 class="header__subtitle text">
+                            первый в истории Камчатки пятизвездочный отель
+                        </h4>
+                    </div>
+                    <div class="header__swiper-control">
+                        <svg
+                            id="header-bg-swiper-next"
+                            class="header__swiper-arrow"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M0 17.5L97.5 17.5M97.5 17.5C90.8789 17.5 76.4684 14.9333 76.4684 4.72156e-07M97.5 17.5C90.8789 17.5 76.4684 20.0667 76.4684 35"
+                            />
+                        </svg>
+                        <div class="header__swiper-progress">
+                            <svg
+                                class="header-timer"
+                                width="142"
+                                height="142"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <g fill="none" stroke="none">
+                                    <circle
+                                        stroke-width="1"
+                                        stroke="#ffffff80"
+                                        cx="50%"
+                                        cy="50%"
+                                        r="70"
+                                    />
+                                </g>
+                                <path
+                                    id="timer-path"
+                                    class="header-timer__path-remaining"
+                                    fill="none"
+                                    d="M 71 71 m -70, 0 a 70,70 0 1,0 140,0 a 70,70 0 1,0 -140,0"
+                                />
+                            </svg>
+                            <p>
+                                <span id="header-cur-slide">01</span> /
+                                <span id="header-count-slides">08</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="booking">
                     <div class="booking__item">
                         <p>Заезд</p>
@@ -246,6 +313,7 @@
             </div>
         </section>
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/asset/ScrollMagic.min.js"></script>
         <script src="js/asset/gsap.min.js"></script>
         <script src="js/asset/animation.gsap.min.js"></script>
