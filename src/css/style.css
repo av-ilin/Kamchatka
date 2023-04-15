@@ -733,6 +733,7 @@ a {
 
 #habbit-swiper-prev,
 #habbit-swiper-next {
+    cursor: pointer;
     stroke: white;
     fill: none;
     transition: all 0.1s ease-in-out;

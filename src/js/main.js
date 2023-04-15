@@ -172,7 +172,7 @@ const introSwiperProgressElems = {
 const introSwiper = new Swiper("#intro-img-swiper", {
     loop: true,
     autoplay: {
-        delay: 10000,
+        delay: 5000,
         disableOnInteraction: false,
         waitForTransition: true,
     },
@@ -201,6 +201,7 @@ const habbitSwiperProgressElems = {
 const habbitImgSwiper = new Swiper("#habbit-img-swiper", {
     loop: true,
     speed: 500,
+    allowTouchMove: false,
     navigation: {
         nextEl: "#habbit-swiper-next",
         prevEl: "#habbit-swiper-prev",
@@ -235,6 +236,7 @@ const habbitImgSwiper = new Swiper("#habbit-img-swiper", {
 
 const habbitInfoSwiper = new Swiper("#habbit-info-swiper", {
     loop: true,
+    allowTouchMove: false,
     speed: 500,
     effect: "creative",
     slidesPerView: 1,
