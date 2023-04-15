@@ -630,16 +630,22 @@ a {
     padding-top: 61px;
     display: flex;
 }
-.habbit-card > img {
-    cursor: url(../images/habbit_cursor.svg) 25 25, pointer;
+#habbit-img-swiper {
     max-width: 892px;
     max-height: 740px;
     border-radius: 40px 0px 0px 0px;
 }
+#habbit-img-swiper img {
+    cursor: url(../images/habbit_cursor.svg) 25 25, pointer;
+}
 .habbit-card__info-main {
+    position: relative;
     box-sizing: border-box;
     padding: 57px 27px 40px 40px;
     background-color: #f2f2f2;
+}
+#habbit-info-swiper {
+    max-width: 386px;
 }
 .habbit-card__lvl {
     font-weight: 700;
@@ -723,6 +729,23 @@ a {
 .habbit-card__info-foot-but {
     display: flex;
     gap: 10px;
+}
+
+#habbit-swiper-prev,
+#habbit-swiper-next {
+    stroke: white;
+    fill: none;
+    transition: all 0.1s ease-in-out;
+}
+#habbit-swiper-prev:hover,
+#habbit-swiper-next:hover {
+    stroke: #2b3f47;
+    fill: white;
+}
+#habbit-swiper-prev:active,
+#habbit-swiper-next:active {
+    stroke: #2b3f47;
+    fill: wheat;
 }
 /* #endregion */
 

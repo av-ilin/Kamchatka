@@ -190,5 +190,66 @@ const introSwiper = new Swiper("#intro-img-swiper", {
         },
     },
 });
+//#endregion
 
+//#region habbit
+const habbitSwiperProgressElems = {
+    numCurSlide: document.getElementById("habbit-cur-slide"),
+    numCountSlides: document.getElementById("habbit-count-slides"),
+};
+
+const habbitImgSwiper = new Swiper("#habbit-img-swiper", {
+    loop: true,
+    speed: 500,
+    navigation: {
+        nextEl: "#habbit-swiper-next",
+        prevEl: "#habbit-swiper-prev",
+    },
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["-100%", 0, 0],
+        },
+    },
+    on: {
+        init: function () {
+            habbitSwiperProgressElems.numCountSlides.textContent = String(
+                this.slides.length
+            ).padStart(2, "0");
+        },
+        slideNextTransitionStart: function () {
+            habbitSwiperProgressElems.numCurSlide.textContent = String(
+                this.realIndex + 1
+            ).padStart(2, "0");
+        },
+        slidePrevTransitionStart: function () {
+            habbitSwiperProgressElems.numCurSlide.textContent = String(
+                this.realIndex + 1
+            ).padStart(2, "0");
+        },
+    },
+});
+
+const habbitInfoSwiper = new Swiper("#habbit-info-swiper", {
+    loop: true,
+    speed: 500,
+    effect: "creative",
+    slidesPerView: 1,
+    creativeEffect: {
+        prev: {
+            translate: [0, 0, -400],
+            opacity: 0,
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+    navigation: {
+        nextEl: "#habbit-swiper-next",
+        prevEl: "#habbit-swiper-prev",
+    },
+});
 //#endregion

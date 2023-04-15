@@ -271,33 +271,101 @@
                         <div class="habbit-menu__item">Шале</div>
                     </div>
                 </div>
+
                 <div class="habbit-card">
-                    <img src="images/habbit_card01.png" alt="card image" />
+                    <div class="swiper" id="habbit-img-swiper">
+                        <div class="swiper-wrapper">
+                            <img
+                                class="swiper-slide"
+                                src="images/habbit_card01.png"
+                                alt="card image"
+                            />
+                            <img
+                                class="swiper-slide"
+                                src="images/habbit_card01.png"
+                                alt="card image"
+                            />
+                        </div>
+                    </div>
 
                     <div class="habbit-card__info-wrap">
                         <div class="habbit-card__info-main">
-                            <h3 class="habbit-card__lvl gradient-text">
-                                STANDARD
-                            </h3>
-                            <p class="habbit-card__desc gradient-text">
-                                Этот светлый, изысканный и компактный номер
-                                обладает всем необходимым для релакса после
-                                увлекательно проведенного дня на Камчатке.
-                            </p>
-                            <div class="habbit-card__attr">
-                                <div class="habbit-card__attr-item">
-                                    <h6>Площадь номера</h6>
-                                    <p class="gradient-text">20 м2</p>
-                                </div>
-                                <div class="habbit-card__attr-item">
-                                    <h6>Вместимость</h6>
-                                    <p class="gradient-text">2 человека</p>
-                                </div>
-                                <div class="habbit-card__attr-item">
-                                    <h6>Удобства</h6>
-                                    <p class="gradient-text">
-                                        Двуспальная кровать QUEEN SIZE 160*200
-                                    </p>
+                            <div class="swiper" id="habbit-info-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h3
+                                            class="habbit-card__lvl gradient-text"
+                                        >
+                                            STANDARD
+                                        </h3>
+                                        <p
+                                            class="habbit-card__desc gradient-text"
+                                        >
+                                            Этот светлый, изысканный и
+                                            компактный номер обладает всем
+                                            необходимым для релакса после
+                                            увлекательно проведенного дня на
+                                            Камчатке.
+                                        </p>
+                                        <div class="habbit-card__attr">
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Площадь номера</h6>
+                                                <p class="gradient-text">
+                                                    20 м2
+                                                </p>
+                                            </div>
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Вместимость</h6>
+                                                <p class="gradient-text">
+                                                    2 человека
+                                                </p>
+                                            </div>
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Удобства</h6>
+                                                <p class="gradient-text">
+                                                    Двуспальная кровать QUEEN
+                                                    SIZE 160*200
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h3
+                                            class="habbit-card__lvl gradient-text"
+                                        >
+                                            STANDARD
+                                        </h3>
+                                        <p
+                                            class="habbit-card__desc gradient-text"
+                                        >
+                                            Этот светлый, изысканный и
+                                            компактный номер обладает всем
+                                            необходимым для релакса после
+                                            увлекательно проведенного дня на
+                                            Камчатке.
+                                        </p>
+                                        <div class="habbit-card__attr">
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Площадь номера</h6>
+                                                <p class="gradient-text">
+                                                    20 м2
+                                                </p>
+                                            </div>
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Вместимость</h6>
+                                                <p class="gradient-text">
+                                                    2 человека
+                                                </p>
+                                            </div>
+                                            <div class="habbit-card__attr-item">
+                                                <h6>Удобства</h6>
+                                                <p class="gradient-text">
+                                                    Двуспальная кровать QUEEN
+                                                    SIZE 160*200
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -306,22 +374,55 @@
                                 <a class="gradient-text" href="">Все номера</a>
                             </div>
                         </div>
+
                         <div class="habbit-card__info-foot">
                             <div class="habbit-card__info-progress">
-                                <p>01</p>
+                                <p id="habbit-cur-slide">01</p>
                                 <div></div>
-                                <p>32</p>
+                                <p id="habbit-count-slides">32</p>
                             </div>
 
                             <div class="habbit-card__info-foot-but">
-                                <img
-                                    src="images/habbit_icon-left.svg"
-                                    alt="prev"
-                                />
-                                <img
-                                    src="images/habbit_icon-right.svg"
-                                    alt="next"
-                                />
+                                <svg
+                                    id="habbit-swiper-prev"
+                                    width="67"
+                                    height="67"
+                                    viewBox="0 0 67 67"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <circle
+                                        cx="32.5"
+                                        cy="34.5"
+                                        r="31.5"
+                                        stroke-width="2"
+                                    />
+                                    <path
+                                        d="M34.059 28.4971L27.8223 34.7338L34.059 40.9705"
+                                        stroke-width="2"
+                                        stroke-linecap="square"
+                                    />
+                                </svg>
+
+                                <svg
+                                    id="habbit-swiper-next"
+                                    width="67"
+                                    height="67"
+                                    viewBox="0 0 67 67"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <circle
+                                        cx="32.5"
+                                        cy="32.5"
+                                        r="31.5"
+                                        transform="matrix(-1 0 0 1 67 2)"
+                                        stroke-width="2"
+                                    />
+                                    <path
+                                        d="M32.941 28.4971L39.1777 34.7338L32.941 40.9705"
+                                        stroke-width="2"
+                                        stroke-linecap="square"
+                                    />
+                                </svg>
                             </div>
                         </div>
                     </div>
