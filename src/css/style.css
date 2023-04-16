@@ -282,6 +282,8 @@ a {
 .header {
     position: relative;
     min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .header .container {
@@ -752,12 +754,87 @@ a {
 
 /* #region bering */
 .bering {
+    overflow: hidden;
     margin: 160px 0;
-}
-
-.bering .container {
     text-align: center;
 }
+
+#bering-swiper {
+    margin: 60px 0 40px;
+    overflow: visible;
+}
+#bering-swiper .swiper-slide {
+    width: 400px;
+    height: 550px;
+    border-radius: 20px 0px 0px 0px;
+
+    object-fit: cover;
+    object-position: center;
+
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: filter 1s ease-in-out, opacity 0.7s ease-in-out;
+}
+#bering-swiper .swiper-slide-active {
+    filter: grayscale(0);
+}
+#bering-swiper .swiper-slide.invisible {
+    opacity: 0;
+}
+
+.bering-card {
+    box-sizing: border-box;
+    padding: 50px 30px;
+    background: linear-gradient(136.07deg, #831b23 0%, #43070b 107.04%);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    filter: grayscale(0) !important;
+}
+.bering-card__title {
+    max-width: 225px;
+    font-family: "Cormorant Garamond";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.bering-card__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.bering__button {
+    width: 228px;
+    height: 42px;
+    margin-bottom: 3px;
+
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+#bering-swiper-prev,
+#bering-swiper-next {
+    fill: transparent;
+    stroke: white;
+    width: 67px;
+    height: 67px;
+    transition: all 0.5s ease-in-out;
+}
+
+#bering-swiper-prev:hover,
+#bering-swiper-next:hover {
+    stroke: wheat;
+    transform: scale(1.1);
+}
+/* #endregion */
+
+/* #region services */
 /* #endregion */
 
 /* #region name */

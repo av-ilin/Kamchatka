@@ -433,8 +433,84 @@
         <section class="bering">
             <div class="container">
                 <h1 class="bering__title title">Ресторан «Беринг»</h1>
+
+                <div class="swiper" id="bering-swiper">
+                    <div class="swiper-wrapper">
+                        <img
+                            class="swiper-slide"
+                            src="images/bering_img-03.jpg"
+                            alt="bering image"
+                        />
+                        <img
+                            class="swiper-slide"
+                            src="images/bering_img-02.jpg"
+                            alt="bering image"
+                        />
+                        <div class="bering-card swiper-slide">
+                            <h2 class="bering-card__title">Высокая кухня:</h2>
+                            <p class="bering-card__text">
+                                Классические блюда дополнены оригинальными
+                                продуктами края и ретроспективно погружают гостя
+                                в эпоху освоения Камчатки.
+                            </p>
+                        </div>
+                        <img
+                            class="swiper-slide"
+                            src="images/bering_img-01.jpg"
+                            alt="bering image"
+                        />
+                        <img
+                            class="swiper-slide"
+                            src="images/bering_img-04.jpg"
+                            alt="bering image"
+                        />
+                    </div>
+                    <svg
+                        class="swiper-button-prev"
+                        id="bering-swiper-prev"
+                        width="67"
+                        height="67"
+                        viewBox="0 0 67 67"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle cx="32.5" cy="34.5" r="31.5" stroke-width="2" />
+                        <path
+                            d="M34.059 28.4971L27.8223 34.7338L34.059 40.9705"
+                            stroke-width="2"
+                            stroke-linecap="square"
+                        />
+                    </svg>
+
+                    <svg
+                        class="swiper-button-next"
+                        id="bering-swiper-next"
+                        width="67"
+                        height="67"
+                        viewBox="0 0 67 67"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="32.5"
+                            cy="32.5"
+                            r="31.5"
+                            transform="matrix(-1 0 0 1 67 2)"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M32.941 28.4971L39.1777 34.7338L32.941 40.9705"
+                            stroke-width="2"
+                            stroke-linecap="square"
+                        />
+                    </svg>
+                </div>
+
+                <button class="bering__button button">
+                    Подробнее о ресторане
+                </button>
             </div>
         </section>
+
+        <section class="services"></section>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/asset/ScrollMagic.min.js"></script>

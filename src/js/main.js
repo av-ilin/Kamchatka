@@ -255,3 +255,43 @@ const habbitInfoSwiper = new Swiper("#habbit-info-swiper", {
     },
 });
 //#endregion
+
+//#region bering
+const beringSwiper = new Swiper("#bering-swiper", {
+    // loop: true,
+    initialSlide: 2,
+    speed: 1000,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    preventInteractionOnTransition: true,
+    // roundLengths: true,
+    navigation: {
+        nextEl: "#bering-swiper-next",
+        prevEl: "#bering-swiper-prev",
+    },
+});
+
+beringSwiper.on("slideNextTransitionEnd", function () {
+    const slide = this.slides[0];
+    slide.classList.add("invisible");
+    this.removeSlide(0);
+    this.appendSlide(slide);
+    setTimeout(() => {
+        this.slides.at(-1).classList.remove("invisible");
+    }, 30);
+});
+beringSwiper.on("slidePrevTransitionEnd", function () {
+    const ind = this.slides.length - 1;
+    const slide = this.slides[ind];
+    slide.classList.add("invisible");
+    this.removeSlide(ind);
+    this.prependSlide(slide);
+    setTimeout(() => {
+        this.slides.at(0).classList.remove("invisible");
+    }, 30);
+});
+//#endregion
+
+//#region services
