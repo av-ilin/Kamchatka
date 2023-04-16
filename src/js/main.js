@@ -265,6 +265,7 @@ const beringSwiper = new Swiper("#bering-swiper", {
     slidesPerGroup: 1,
     centeredSlides: true,
     slidesPerView: "auto",
+    allowTouchMove: false,
     preventInteractionOnTransition: true,
     // roundLengths: true,
     navigation: {
