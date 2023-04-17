@@ -296,3 +296,39 @@ beringSwiper.on("slidePrevTransitionEnd", function () {
 //#endregion
 
 //#region services
+const servicesThumbSwiper = new Swiper("#services-thumb-swiper", {
+    speed: 1000,
+    slidesPerGroup: 1,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+});
+
+const servicesInfoSwiper = new Swiper("#services-info-swiper", {
+    speed: 1000,
+    allowTouchMove: false,
+});
+
+const servicesImgSwiper = new Swiper("#services-img-swiper", {
+    initialSlide: servicesInfoSwiper.slides.length - 1,
+    speed: 1000,
+    allowTouchMove: false,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        waitForTransition: true,
+    },
+    thumbs: {
+        swiper: servicesThumbSwiper,
+    },
+    on: {
+        slideNextTransitionStart: function () {
+            servicesInfoSwiper.slideTo(this.realIndex);
+        },
+        slidePrevTransitionStart: function () {
+            servicesInfoSwiper.slideTo(this.realIndex);
+        },
+    },
+});
+servicesImgSwiper.slideNext();
+//#endregion
