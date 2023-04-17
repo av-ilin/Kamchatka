@@ -1104,5 +1104,102 @@ a {
 }
 /* #endregion */
 
-/* #region name */
+/* #region footer */
+
+.footer hr {
+    height: 1px;
+    background: rgba(242, 242, 242, 0.2);
+    border: none;
+    margin: 0;
+}
+
+.contact-box {
+    margin: 40px 0 70px;
+    display: flex;
+}
+.footer__logo-box > img {
+    width: 242px;
+    height: 51.43px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.footer__logo-box > p {
+    max-width: 227px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.footer__nav-box {
+    align-self: flex-end;
+    margin-left: 99px;
+    margin-right: auto;
+    max-width: 311px;
+    max-height: 90px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 87px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.footer__nav-box > p {
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.footer__nav-box > p:hover {
+    transform: scale(1.05);
+}
+
+.footer__address-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.footer__address-box > a:first-child {
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 80px;
+    color: #e9d3b6;
+}
+
+.footer__meta-box {
+    margin: 22px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__meta-box > p {
+    font-family: "Geometria";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+.creator-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+.creator-box > p {
+    width: 87px;
+    font-family: "TT Hoves";
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 8px;
+    letter-spacing: -0.03em;
+}
 /* #endregion */

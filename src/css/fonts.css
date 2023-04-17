@@ -63,3 +63,17 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Geometria";
+    src: URL("../fonts/Geometria-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Hoves";
+    src: URL("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
