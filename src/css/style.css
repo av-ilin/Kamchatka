@@ -836,7 +836,13 @@ a {
 
 /* #region services */
 .services {
-    margin: 160px 0;
+    margin-top: 160px;
+    padding-bottom: 240px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 50%,
+        transparent 50%
+    );
 }
 .services__title {
     margin-bottom: 60px;
@@ -862,7 +868,7 @@ a {
     max-width: 497px;
 }
 .service hr {
-    margin: 37px 0 61px;
+    margin: 37px 0 24px;
     width: 92px;
     height: 0px;
     border: 1px solid #e9d3b6;
@@ -878,6 +884,14 @@ a {
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
+}
+.service__button {
+    margin: 70px 0px 1px 3px;
+    width: 128px;
+    height: 42px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #f2f2f2;
 }
 
 #services-thumb-swiper {
@@ -924,7 +938,7 @@ a {
         rgba(131, 27, 35, 0.8) 0%,
         rgba(67, 7, 11, 0.8) 107.04%
     );
-    transition: width 0.5s linear;
+    transition: width 4s linear;
 }
 #services-thumb-swiper .swiper-slide-thumb-active .timer {
     width: 100%;
@@ -933,6 +947,9 @@ a {
     transition: width 4s linear;
 }
 
+/* #endregion */
+
+/* #region tours */
 /* #endregion */
 
 /* #region name */
