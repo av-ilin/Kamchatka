@@ -1,6 +1,6 @@
 const navigation = new Navigation();
 
-//#region scrollnagic
+//#region scrollmagic
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
@@ -331,4 +331,17 @@ const servicesImgSwiper = new Swiper("#services-img-swiper", {
     },
 });
 servicesImgSwiper.slideNext();
+//#endregion
+
+//#region tours
+const toursCardSwiper = new Swiper("#tours-card-swiper", {
+    speed: 1000,
+    slidesPerGroup: 1,
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    navigation: {
+        nextEl: "#tours-swiper-next",
+        prevEl: "#tours-swiper-prev",
+    },
+});
 //#endregion
