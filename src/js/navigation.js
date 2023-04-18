@@ -6,7 +6,12 @@ class Navigation {
     static burger = document.getElementById("nav-burger");
     static refs = {
         items: Array.from(document.getElementsByClassName("nav__menu-item")),
-        about: document.getElementsByClassName("about__logo")[0],
+        about: document.getElementsByClassName("about")[0],
+        habit: document.getElementsByClassName("habit")[0],
+        bering: document.getElementsByClassName("bering")[0],
+        services: document.getElementsByClassName("services")[0],
+        tours: document.getElementsByClassName("tours")[0],
+        contacts: document.getElementsByClassName("footer")[0],
     };
 
     constructor() {
@@ -63,7 +68,40 @@ class Navigation {
 
         switch (index % 6) {
             case 0:
-                Navigation.refs.about.scrollIntoView({ behavior: "smooth" });
+                Navigation.refs.about.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                });
+                break;
+            case 1:
+                Navigation.refs.habit.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                });
+                break;
+            case 2:
+                Navigation.refs.bering.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                });
+                break;
+            case 3:
+                Navigation.refs.services.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                });
+                break;
+            case 4:
+                Navigation.refs.tours.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                });
+                break;
+            case 5:
+                Navigation.refs.contacts.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                });
                 break;
         }
     }
