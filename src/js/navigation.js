@@ -5,7 +5,7 @@ class Navigation {
     static logo = document.getElementById("nav-logo");
     static burger = document.getElementById("nav-burger");
     static refs = {
-        items: Array.from(document.getElementsByClassName("nav__menu-item")),
+        items: Array.from(document.getElementsByClassName("nav-item")),
         about: document.getElementsByClassName("about")[0],
         habit: document.getElementsByClassName("habit")[0],
         bering: document.getElementsByClassName("bering")[0],
