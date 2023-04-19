@@ -292,7 +292,6 @@ a {
 }
 
 .header__title {
-    padding-top: 150px;
     margin-bottom: 10px;
     max-width: 784px;
 }
@@ -334,6 +333,7 @@ a {
 }
 
 .header__content {
+    padding-top: 150px;
     display: flex;
     justify-content: space-between;
 }
