@@ -65,7 +65,6 @@ class Navigation {
 
     navTo(index) {
         this.navOff();
-        /* 
         switch (index % 6) {
             case 0:
                 Navigation.refs.about.scrollIntoView({
@@ -104,6 +103,5 @@ class Navigation {
                 });
                 break;
         }
-        */
     }
 }
