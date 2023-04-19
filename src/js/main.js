@@ -295,6 +295,8 @@ beringSwiper.on("slidePrevTransitionEnd", function () {
 });
 //#endregion
 
+/* 
+
 //#region services
 const servicesThumbSwiper = new Swiper("#services-thumb-swiper", {
     speed: 1000,
@@ -365,3 +367,5 @@ new ScrollMagic.Scene({
     )
     .addTo(controller);
 //#endregion
+
+*/
