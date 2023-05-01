@@ -34,11 +34,10 @@ const headerTimer = {
 
 const headerSwiper = new Swiper("#header-bg-swiper", {
     loop: true,
-    effect: "cards",
-    cardsEffect: {
-        perSlideOffset: 20,
-        perSlideRotate: 4,
-    },
+    // effect: "cube",
+    // cubeEffect: {
+    //     slideShadows: false,
+    // },
     autoplay: {
         delay: headerTiming,
         disableOnInteraction: false,
