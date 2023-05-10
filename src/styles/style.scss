@@ -1,3 +1,7 @@
+@import "./reset.css";
+@import "./fonts.css";
+@import "./swiper-bundle.min.css";
+
 /* #region base */
 body {
     font-family: "Manrope", sans-serif;
@@ -1208,6 +1212,7 @@ a {
 }
 /* #endregion */
 
+/* 
 @media (max-width: 1450px) {
     .container {
         max-width: 1024px;
@@ -1246,7 +1251,6 @@ a {
     }
     #services-info-swiper {
         width: 100%;
-        /* max-width: none; */
     }
     .service {
         text-align: center;
@@ -1480,7 +1484,6 @@ a {
         font-size: 12px;
     }
     .header__swiper-control {
-        /* height: 100px; */
         transform: scale(0.7);
     }
     .booking {
@@ -1533,4 +1536,5 @@ a {
     .footer__address-box {
         font-size: 15px;
     }
-}
+} 
+*/
