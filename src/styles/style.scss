@@ -295,13 +295,13 @@ nav.active {
 .header {
     position: relative;
     min-height: 100vh;
-}
 
-.header .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 
 .header__title {
@@ -317,32 +317,33 @@ nav.active {
     align-items: center;
     gap: 40px;
 }
-
 .booking__item {
     position: relative;
-}
 
-.booking__item p {
-    margin-bottom: 6px;
-    width: 167px;
+    p {
+        margin-bottom: 6px;
+        width: 167px;
 
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-}
-.booking__item span {
-    font-weight: 200;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: -0.03em;
-}
-.booking__item div {
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    top: calc(50% - 10px);
-    font-size: 20px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+
+    span {
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+    }
+
+    div {
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        top: calc(50% - 10px);
+        font-size: 20px;
+    }
 }
 
 .header__content {
@@ -363,29 +364,33 @@ nav.active {
     stroke: white;
     stroke-width: 2;
     transition: all 0.4s ease-in-out;
-}
-.header__swiper-arrow:hover {
-    stroke: wheat;
+
+    &:hover {
+        stroke: wheat;
+    }
 }
 
 .header__swiper-progress {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    p {
+        position: absolute;
+        font-family: "Cormorant Garamond";
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    #header-cur-slide {
+        font-size: 48px;
+    }
 }
-.header__swiper-progress > p {
-    position: absolute;
-    font-family: "Cormorant Garamond";
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-#header-cur-slide {
-    font-size: 48px;
-}
+
 .header-timer {
     transform: scale(1, -1);
 }
