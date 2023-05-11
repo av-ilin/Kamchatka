@@ -1402,6 +1402,22 @@ nav.active {
         width: 70vw;
         height: 70vw;
     }
+
+    #bering-swiper .swiper-slide {
+        width: 300px;
+        height: 412px;
+    }
+    #bering-swiper-prev,
+    #bering-swiper-next {
+        width: 50px;
+        height: 50px;
+    }
+    #bering-swiper-prev {
+        left: 25px;
+    }
+    #bering-swiper-next {
+        right: 25px;
+    }
 }
 
 @media (max-width: 461px) {

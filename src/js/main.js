@@ -254,7 +254,7 @@ const habbitInfoSwiper = new Swiper("#habbit-info-swiper", {
     },
 });
 //#endregion
-/*
+
 //#region bering
 const beringSwiper = new Swiper("#bering-swiper", {
     // loop: true,
@@ -293,7 +293,7 @@ beringSwiper.on("slidePrevTransitionEnd", function () {
     }, 30);
 });
 //#endregion
-
+/*
 //#region services
 const servicesThumbSwiper = new Swiper("#services-thumb-swiper", {
     speed: 1000,
