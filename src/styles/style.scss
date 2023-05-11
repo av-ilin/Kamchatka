@@ -22,6 +22,24 @@ a {
     margin: 0 auto;
 }
 
+.section {
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+
+    &.h {
+        overflow: hidden;
+    }
+    &.m {
+        margin: 160px auto;
+    }
+    @media (max-width: 768px) {
+        &.m {
+            margin: 70px auto;
+        }
+    }
+}
+
 .button {
     cursor: pointer;
     width: 161px;
@@ -596,10 +614,9 @@ nav.active {
 .about__house {
     z-index: 2;
     max-height: 1032px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: -100px;
-    /* object-fit: contain; */
 }
 
 .about__chalet {
@@ -617,10 +634,6 @@ nav.active {
 /* #endregion */
 
 /* #region habit */
-.habit {
-    margin: 160px 0;
-}
-
 .habbit__head {
     display: flex;
     justify-content: space-between;
@@ -797,8 +810,6 @@ nav.active {
 
 /* #region bering */
 .bering {
-    overflow: hidden;
-    margin: 160px 0;
     text-align: center;
 }
 
@@ -994,9 +1005,6 @@ nav.active {
 /* #endregion */
 
 /* #region tours */
-.tours {
-    position: relative;
-}
 
 .tours__bg {
     z-index: -1;
@@ -1457,14 +1465,9 @@ nav.active {
         width: 50px;
         height: 50px;
     }
-    .habit,
+
     .services {
-        margin: 0;
-    }
-    .bering {
-        margin: 70px 0;
-    }
-    .services {
+        margin: 0 auto;
         padding-bottom: 150px;
     }
 }
