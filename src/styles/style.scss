@@ -58,6 +58,7 @@ a {
         font-size: 112px;
     }
     @media (max-width: 768px) {
+        text-align: center;
         font-size: 65px;
     }
     @media (max-width: 485px) {
@@ -1249,6 +1250,24 @@ nav.active {
 
 /* #region media */
 
+@media (max-width: 1437px) {
+    #tours-swiper-next,
+    #tours-swiper-prev {
+        width: 60px;
+        height: 60px;
+        top: calc(50% - 30px);
+    }
+    #tours-swiper-next {
+        right: 0;
+    }
+    #tours-swiper-prev {
+        left: 0;
+    }
+    .tours__text {
+        padding-top: 20px;
+    }
+}
+
 @media (max-width: 1405px) {
     .about__chalet {
         bottom: 18vw;
@@ -1289,6 +1308,39 @@ nav.active {
 @media (max-width: 1100px) {
     .about__title {
         padding-top: 190px;
+    }
+
+    .services__swipers-wrap {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #services-img-swiper {
+        width: 100%;
+    }
+    #services-info-swiper {
+        width: 100%;
+    }
+    .service {
+        text-align: center;
+    }
+    .service hr {
+        margin: 20px auto 10px;
+    }
+
+    .tours__bg {
+        height: 440px;
+    }
+    .tours__bg .filter {
+        height: 30%;
+    }
+    .tours .container {
+        padding-top: 326px;
+    }
+    .tours__grandtext {
+        font-size: 40px;
+        line-height: 40px;
+        max-width: 504px;
+        padding-bottom: 10px;
     }
 }
 
@@ -1332,6 +1384,18 @@ nav.active {
         width: 159px;
         aspect-ratio: 1/1;
         transform: scale(0.6);
+    }
+
+    #tours-card-swiper .tour-card {
+        width: 100%;
+        height: 400px;
+        padding: 40px 50px;
+    }
+    #tours-swiper-next,
+    #tours-swiper-prev {
+        width: 40px;
+        height: 40px;
+        top: calc(50% - 20px);
     }
 }
 
@@ -1377,6 +1441,16 @@ nav.active {
         width: 50px;
         height: 50px;
     }
+    .habit,
+    .services {
+        margin: 0;
+    }
+    .bering {
+        margin: 70px 0;
+    }
+    .services {
+        padding-bottom: 150px;
+    }
 }
 
 @media (max-width: 740px) {
@@ -1417,6 +1491,20 @@ nav.active {
     }
     #bering-swiper-next {
         right: 25px;
+    }
+
+    .tours__bg {
+        height: 312px;
+    }
+    .tours .container {
+        padding-top: 200px;
+    }
+    .tours__grandtext {
+        font-size: 29px;
+        line-height: 32px;
+    }
+    .tours__text {
+        font-size: 13px;
     }
 }
 
