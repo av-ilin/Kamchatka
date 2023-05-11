@@ -65,43 +65,30 @@ class Navigation {
 
     navTo(index) {
         this.navOff();
+        let block = Navigation.refs.about;
         switch (index % 6) {
             case 0:
-                Navigation.refs.about.scrollIntoView({
-                    block: "center",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.about;
                 break;
             case 1:
-                Navigation.refs.habit.scrollIntoView({
-                    block: "center",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.habit;
                 break;
             case 2:
-                Navigation.refs.bering.scrollIntoView({
-                    block: "center",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.bering;
                 break;
             case 3:
-                Navigation.refs.services.scrollIntoView({
-                    block: "center",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.services;
                 break;
             case 4:
-                Navigation.refs.tours.scrollIntoView({
-                    block: "start",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.tours;
                 break;
             case 5:
-                Navigation.refs.contacts.scrollIntoView({
-                    block: "start",
-                    behavior: "smooth",
-                });
+                block = Navigation.refs.contacts;
                 break;
         }
+        block.scrollIntoView({
+            block: "center",
+            // behavior: "smooth",
+        });
     }
 }
