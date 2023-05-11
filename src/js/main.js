@@ -190,7 +190,7 @@ new ScrollMagic.Scene({
     )
     .addTo(controller);
 //#endregion
-/*
+
 //#region habbit
 const habbitSwiperProgressElems = {
     numCurSlide: document.getElementById("habbit-cur-slide"),
@@ -254,7 +254,7 @@ const habbitInfoSwiper = new Swiper("#habbit-info-swiper", {
     },
 });
 //#endregion
-
+/*
 //#region bering
 const beringSwiper = new Swiper("#bering-swiper", {
     // loop: true,

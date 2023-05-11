@@ -58,13 +58,13 @@ a {
         font-size: 112px;
     }
     @media (max-width: 768px) {
-        font-size: 100px;
+        font-size: 65px;
     }
     @media (max-width: 485px) {
-        font-size: 80px;
+        font-size: 57px;
     }
     @media (max-width: 425px) {
-        font-size: 60px;
+        font-size: 50px;
     }
 }
 
@@ -1249,10 +1249,6 @@ nav.active {
 
 /* #region media */
 
-.about {
-    margin-bottom: 1000px;
-}
-
 @media (max-width: 1405px) {
     .about__chalet {
         bottom: 18vw;
@@ -1277,6 +1273,17 @@ nav.active {
         right: auto;
         left: 0;
     }
+
+    .habbit__head {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .habit__title {
+        align-self: flex-start;
+    }
+    .habbit-card {
+        padding-top: 0px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -1299,6 +1306,18 @@ nav.active {
 @media (max-width: 1024px) {
     .header__title {
         font-size: 121px;
+    }
+
+    .habbit-card {
+        flex-direction: column;
+    }
+    #habbit-img-swiper,
+    #habbit-info-swiper {
+        max-width: none;
+        width: 100%;
+    }
+    .habbit-card__buttons {
+        margin-top: 50px;
     }
 }
 
@@ -1351,6 +1370,12 @@ nav.active {
     }
     .intro {
         min-height: calc(600px + 9vw * 5);
+    }
+
+    #habbit-swiper-prev,
+    #habbit-swiper-next {
+        width: 50px;
+        height: 50px;
     }
 }
 
